@@ -1,0 +1,126 @@
+body {
+ 
+    background-color: rgb(34, 34, 34);
+
+}
+
+.addb{width: 35px;
+    text-align: center;
+}
+
+.textstarters {
+    width: 75px;
+}
+
+.title {
+padding-bottom: 30px;
+text-align: left;
+font-size:larger;
+
+}
+
+.salads{
+    width: 220px;
+    font-style:normal;
+    font-weight: bold;
+
+}
+
+.main{
+    width: 220px;
+    font-style:normal;
+    font-weight: bold;
+
+}
+
+#menu {
+    text-align: center;
+
+}
+
+
+
+.costbox{
+    margin-left: 90%;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.textstarters{
+
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+.bill{
+    font-weight: bold;
+
+}
+
+#j0{
+    color: white;
+    padding-left: 22%;
+    font-weight: bold;
+    height:2%;
+    width:100%;
+    top: 0;
+    position: fixed;
+    background: rgb(2, 110, 60);
+
+    
+    
+
+}
+
+#j1{
+    width: 80%;
+    margin-right: 20%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 1px;
+
+}
+
+#j2,#j3,#j4{
+    width: 80%;
+    margin-right: 20%;
+    margin-left: 10%;
+    margin-bottom:45px ;
+
+}
+
+
+hr.solid {
+    margin-right: 10%;
+    border-top: 3px solid #bbb;
+  }
+
+  #copywright{
+    bottom: 0 ;
+    color: blanchedalmond;
+    text-align: center;
+
+  }
+
+  #accounting{
+   margin-left: 1%;
+
+  }
+
+  #calculate{
+    margin-left: 40%;
+    background: rgb(2, 110, 60);
+    color: white;
+ 
+   }
+
+   .addb{
+    
+    background: rgb(2, 110, 60);
+    color: white;
+    font-weight: bold;
+ 
+   }

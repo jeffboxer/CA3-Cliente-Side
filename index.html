@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" refer href="css/style.css">
+<style></style>
+
+<body >
+    <div class="jumbotron" id="j0"><h2>Cliente Side Programming - CA3 - INTERACTIVE WEBSITE</h2><br></div>
+
+    <div class="jumbotron" id="j1">
+        <h1>Staff Password Validator </h1><br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" minlength="8" onclick="requirements()">
+        <button onclick="pwdChecker()">Check Password</button> <br><br>
+        <input type="checkbox" onclick="showPwd()">Show Password
+
+        <p id="pwdreq"></p>
+        <p id="status"></p>
+
+    </div>
+    <br><br>
+    <div class="jumbotron" id="j2">
+        <h1>Customers List</h1><br>
+        <button id="getusers">See Customers</button>
+        <button id="hideusers" onclick="hideUsers()">Hide Customers</button>
+        <p id="customers"></p><br><br>
+
+    </div>
+    <div class="jumbotron" id="j3">
+        <h1 id="menu"> Menu </h1> <br>
+        
+        <hr class="solid">
+        <h2> Starters </h2>
+        <hr class="solid">
+        
+        
+
+        <table style="width:50%">
+            <tr>
+                <th class="title">Item</th>
+                <th class="title">Price</th>
+                <th class="title">Qt.</th>
+                <br>
+                
+            </tr>
+
+            <tr>
+                <td>
+                    <label id="rcsalad" class="salads">Caesar Salad (Vegetarian)</label>
+                </td>
+
+                <td id="item1"></td>
+                <td>
+                    <button id="i1sub" class="addb" onclick="i1sub()">-</button>
+                    <input type="text" id="tcsalad" class="textstarters">
+                    <button id="i1add" class="addb" onclick="i1add();">+</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label id="rgsalad" class="salads">Greek Salad (Vegetarian)</label>
+                </td>
+
+                <td id="item2"></td>
+                <td>
+                    <button id="i2sub" class="addb" onclick="i2sub()">-</button>
+                    <input type="text" id="tgsalad" class="textstarters">
+                    <button id="i2add" class="addb" onclick="i2add();">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="rtsalad" class="salads">Tuna Salad</label>
+                </td>
+                <td id="item3"></td>
+                <td>
+                    <button id="i3sub" class="addb" onclick="i3sub()">-</button>
+                    <input type="text" id="ttsalad" class="textstarters">
+                    <button id="i3add" class="addb" onclick="i3add();">+</button>
+                </td>
+            </tr>
+        </table><br><br>
+
+        <hr class="solid">
+        <h2> Main </h2>
+        <hr class="solid">
+
+        <table style="width:50%">
+            <tr>
+                <th class="title">Item</th>
+                <th class="title">Price</th>
+                <th class="title">Qt.</th>
+                <br>
+            </tr>
+
+            <tr>
+                <td>
+                    <label id="cburger" class="main">Cheese Burger</label>
+                </td>
+
+                <td id="item4"></td>
+                <td>
+                    <button id="i4sub" class="addb" onclick="i4sub()">-</button>
+                    <input type="text" id="tcburger" class="textstarters">
+                    <button id="i4add" class="addb" onclick="i4add();">+</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label id="bcburger" class="main">Bacon Cheese Burger</label>
+                </td>
+
+                <td id="item5"></td>
+                <td>
+                    <button id="i5sub" class="addb" onclick="i5sub()">-</button>
+                    <input type="text" id="tbcburger" class="textstarters">
+                    <button id="i5add" class="addb" onclick="i5add();">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="fburger" class="main">Falafel Burger (Vegetarian)</label>
+                </td>
+                <td id="item6"></td>
+                <td>
+                    <button id="i6sub" class="addb" onclick="i6sub()">-</button>
+                    <input type="text" id="tfburger" class="textstarters">
+                    <button id="i6add" class="addb" onclick="i6add();">+</button>
+                </td>
+            </tr>
+        </table><br><br>
+
+        <hr class="solid">
+        <h2> Desserts </h2>
+        <hr class="solid">
+
+        <table style="width:50%">
+            <tr>
+                <th class="title">Item</th>
+                <th class="title">Price</th>
+                <th class="title">Qt.</th>
+                <br>
+            </tr>
+
+            <tr>
+                <td>
+                    <label id="sicecream" class="main">Strawberry Ice Cream</label>
+                </td>
+
+                <td id="item7"></td>
+                <td>
+                    <button id="i7sub" class="addb" onclick="i7sub()">-</button>
+                    <input type="text" id="tsicecream" class="textstarters">
+                    <button id="i7add" class="addb" onclick="i7add();">+</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label id="cicecream" class="main">Chocollate Ice Cream</label>
+                </td>
+
+                <td id="item8"></td>
+                <td>
+                    <button id="i8sub" class="addb" onclick="i8sub()">-</button>
+                    <input type="text" id="tcicecream" class="textstarters">
+                    <button id="i8add" class="addb" onclick="i8add();">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="vicecream" class="main">Vanilla Ice Cream</label>
+                </td>
+                <td id="item9"></td>
+                <td>
+                    <button id="i9sub" class="addb" onclick="i9sub()">-</button>
+                    <input type="text" id="tvicecream" class="textstarters">
+                    <button id="i9add" class="addb" onclick="i9add();">+</button>
+                </td>
+            </tr>
+        </table><br><br>
+
+        <hr class="solid">
+        <h2> Drinks </h2>
+        <hr class="solid">
+
+        <table style="width:50%">
+            <tr>
+                <th class="title">Item</th>
+                <th class="title">Price</th>
+                <th class="title">Qt.</th>
+                <br>
+            </tr>
+
+            <tr>
+                <td>
+                    <label id="sdrink" class="main">Soft Drink 300ml</label>
+                </td>
+
+                <td id="item10"></td>
+                <td>
+                    <button id="i10sub" class="addb" onclick="i10sub()">-</button>
+                    <input type="text" id="tsdrink" class="textstarters">
+                    <button id="i10add" class="addb" onclick="i10add();">+</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label id="njuice" class="main">Natural Juice 500ml</label>
+                </td>
+
+                <td id="item11"></td>
+                <td>
+                    <button id="i11sub" class="addb" onclick="i11sub()">-</button>
+                    <input type="text" id="tnjuice" class="textstarters">
+                    <button id="i11add" class="addb" onclick="i11add();">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="swater" class="main">Still Water 500ml</label>
+                </td>
+                <td id="item12"></td>
+                <td>
+                    <button id="i12sub" class="addb" onclick="i12sub()">-</button>
+                    <input type="text" id="tswater" class="textstarters">
+                    <button id="i12add" class="addb" onclick="i12add();">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="spwater" class="main">Sparkling Water 500ml</label>
+                </td>
+                <td id="item13"></td>
+                <td>
+                    <button id="i13sub" class="addb" onclick="i13sub()">-</button>
+                    <input type="text" id="tspwater" class="textstarters">
+                    <button id="i13add" class="addb" onclick="i13add();">+</button>
+                </td>
+            </tr>
+        </table><br><br>
+    </div>
+
+
+
+    <div class="jumbotron" id="j4">
+        <hr class="solid">
+        <h2 id="accounting">   Accounting:  </h2>
+        <hr class="solid"><br><br>
+        <table>
+            <td>
+                <label for="total" class="bill">Total Bill :</label>
+
+            </td>
+
+            <td><input type="text" id="bill" class="costbox" maxlength="4" readonly><br><br></td>
+
+            <tr>
+                <td>
+                    <label for="total" class="bill">Starters :</label>
+                </td>
+
+                <td>
+                    <input type="text" id="starter" class="costbox" readonly><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="total" class="bill">Main :</label>
+                </td>
+
+                <td>
+                    <input type="text" id="main" class="costbox" readonly><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="total" class="bill">Dessert :</label>
+                </td>
+
+                <td>
+                    <input type="text" id="dessert" class="costbox" readonly><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="total" class="bill">Drinks :</label>
+                </td>
+
+                <td>
+                    <input type="text" id="drinks" class="costbox" readonly><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="total" class="bill">Vegetarian cost :</label>
+                </td>
+
+                <td>
+                    <input type="text" class="costbox" id="veg" readonly><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="total" class="bill">Non-Vegetarian cost :</label>
+                </td>
+
+                <td>
+                    <input type="text" id="nveg" class="costbox" readonly><br><br>
+                </td>
+            </tr>
+
+
+
+        </table>
+<br>
+        <button type="button" id="calculate" onclick="tcsalad();tgsalad();ttsalad();tcburger();tbcburger();tfburger();
+                 tsicecream();tcicecream();tvicecream();tsdrink();tnjuice();tswater();tspwater();total();">
+            Calculate</button>
+    </div>
+
+    <p id="copywright">Created by Jefferson Pereira de Matos - 2021</p>
+
+    <script src="script.js"></script>
+    <style></style>
+
+</body>
+
+</html>
