@@ -123,7 +123,7 @@ font-size:larger;
 }
 
 .column2{
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 0%;
     text-align: left;
 }
@@ -152,8 +152,17 @@ hr.solid {
 
   #copywright{
     bottom: 0 ;
+    margin-left: 3%;
     color: blanchedalmond;
     text-align: center;
+
+  }
+
+  #copywright2{
+    bottom: 0 ;
+    margin-left: 30%;
+    color: blanchedalmond;
+    position: fixed;
 
   }
 
@@ -163,15 +172,15 @@ hr.solid {
   }
 
   #calculate{
-    margin-left: 30%;
-    background: rgb(2, 110, 60);
+    margin-left: 38%;
+    background: rgb(3, 155, 84);
     color: white;
  
    }
 
    .addb{
     
-    background: rgb(2, 110, 60);
+    background: rgb(3, 155, 84);
     color: white;
     font-weight: bold;
  
@@ -203,9 +212,21 @@ hr.solid {
     align-self: center;
 }
 
-.btn{
-    width: 300px;
-    margin-left: 10%;
+#btn1{
+    width: 100px;
+    height: 62px;
+    margin-left: 8%;
+    background: rgb(2, 110, 60);
+    border-color: rgb(2, 110, 60);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+#btn2{
+    width: 100px;
+    height: 62px;
     background: rgb(2, 110, 60);
     border-color: rgb(2, 110, 60);
     border-left: 1px solid white;
